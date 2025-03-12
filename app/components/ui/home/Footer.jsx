@@ -2,21 +2,21 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <header>
-            <section className="container flex justify-center items-center">
-                <img src="images/logo.png" alt="" className="w-24 h-24" />
+        <footer>
+            <section class="flex justify-center items-center border-t border-gray-400 py-8 space-x-10 space-x-reverse">
+                <div>
+                    <i class="fa fa-youtube-square text-2xl text-gray-500"></i>
+                </div>
+                <div>
+                    <i class="fa fa-linkedin-square text-2xl text-gray-500"></i>
+                </div>
+                <div>
+                    <i class="fa fa-twitter-square text-2xl text-gray-500"></i>
+                </div>
+                <div>
+                    <i class="fa fa-instagram text-2xl text-gray-500"></i>
+                </div>
             </section>
-
-            <section className="border-b">
-                <nav
-                    className="container flex justify-around items-center space-x-1 space-x-reverse text-gray-500 text-xs md:text-sm lg:text-lg font-light pb-4 px-8">
-                    <a href="">ثبت آگهی</a>
-                    <a href="">درباره دیوار</a>
-                    <a href="">دریافت برنامه</a>
-                    <a href="">اتاق خبر</a>
-                    <a href="">پشتیبانی</a>
-                </nav>
-            </section>
-        </header>
+        </footer>
     )
 }
