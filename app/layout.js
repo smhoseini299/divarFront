@@ -9,7 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fa">
+      <head>
+        <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css"></link>
+      </head>
       <body>{children}</body>
     </html>
   );
