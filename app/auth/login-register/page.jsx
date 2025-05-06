@@ -16,7 +16,7 @@ export default function LoginRegister() {
                             شماره موبایل
                         </label>
                         <input type='text' className='mt-1 block w-full px-2 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-rose-800
-                        focus:border-rose-800 placeholder-gray-400' placeholder='09'>
+                        focus:border-rose-800 placeholder-gray-400' placeholder='09121111111'>
                         </input>
                     </div>
                     <button className='w-full bg-rose-800 text-white py-2 rounded-md shadow-md hover:bg-rose-700 transition-all'>ارسال کد تایید</button>

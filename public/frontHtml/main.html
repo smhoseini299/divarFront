@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <link href="output.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header
+        class="flex justify-center items-center border-b-2 pb-4 pt-3 lg:space-x-8 lg:space-x-reverse xl:space-x-12 xl:space-x-reverse">
+
+        <!-- logo -->
+        <section class="hidden lg:flex">
+            <img src="images/logo.png" alt class="w-14 h-14">
+        </section>
+
+        <!-- location -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center space-x-3 space-x-reverse">
+                <i class="fa fa-map-marker text-xl text-gray-500"></i>
+                <p>تهران</p>
+            </button>
+        </section>
+
+        <!-- category -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center space-x-3 space-x-reverse">
+                <p>دسته ها</p>
+                <i class="fa fa-angle-down text-xl text-gray-500"></i>
+            </button>
+        </section>
+
+        <!-- search -->
+        <section class="container mx-4 lg:mx-0 lg:w-2/6 flex justify-center items-center bg-gray-100 rounded-sm">
+            <input type="text" placeholder="&#xf002 جستجو در همه آگهی ها"
+                class="fa border-l lg:border-l-0 border-gray-300 w-5/6 py-1 my-2 ps-2 lg:w-[94%] placeholder:text-gray-400 placeholder:text-lg bg-gray-100">
+            <div class="mx-1 flex justify-center lg:hidden  items-center space-x-2 space-x-reverse">
+                <button class="text-gray-600 ms-2">تهران</button>
+                <i class="fa fa-map-marker text-xl text-gray-400"></i>
+            </div>
+        </section>
+
+        <!-- my divar -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center space-x-3 space-x-reverse">
+                <i class="fa fa-user text-xl text-gray-500"></i>
+                <p class="text-xs">دیوار من</p>
+            </button>
+        </section>
+
+        <!-- chat -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center space-x-3 space-x-reverse">
+                <i class="fa fa-comment text-xl text-gray-500"></i>
+                <p class="text-xs">چت</p>
+            </button>
+        </section>
+
+        <!-- support -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center">
+                <p class="text-xs">پشتیبانی</p>
+            </button>
+        </section>
+
+        <!-- submit ads -->
+        <section class="hidden lg:flex text-gray-500">
+            <button class="flex justify-center items-center bg-red-700 text-white px-5 py-2 font-bold rounded">
+                ثبت آگهی
+            </button>
+        </section>
+
+    </header>
+
+    <section class="flex lg:container mt-10 pb-52 lg:mt-0">
+        <aside class="w-1/5 hidden lg:block mt-10">
+            <section>
+                <header class="mb-3">
+                    <h5 class="font-light text-sm">دسته ها</h5>
+                </header>
+                <section class="space-y-5">
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-home"></i>
+                        <p>املاک</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-car"></i>
+                        <p>وسیله نقلیه</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-tablet text-2xl"></i>
+                        <p>کالای دیجیتال</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-diamond"></i>
+                        <p>خانه و آشپزخانه</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-magic"></i>
+                        <p>خدمات</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-clock-o"></i>
+                        <p>وسایل شخصی</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-inbox"></i>
+                        <p>سرگرمی و فراغت</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-user-secret"></i>
+                        <p>اجتماعی</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-microphone"></i>
+                        <p>تجهیزات و صنعتی</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-shopping-bag"></i>
+                        <p>استخدام و کاریابی</p>
+                    </div>
+                    <div class="flex items-center space-x-reverse space-x-2 text-gray-600">
+                        <i class="fa fa-user-plus"></i>
+                        <p>رزومه کارجویان <span class="text-red-700 text-sm">(جدید)</span></p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="border-t mt-6 pt-6 w-3/4">
+
+                <div id="accordionExample">
+                    <div>
+                        <h2 class="mb-0" id="headingTwo">
+                            <button class="group relative flex  space-x-3 space-x-reverse" type="button"
+                                data-te-collapse-init data-te-collapse-collapsed data-te-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                        <path strokeLinecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                <p>محل</p>
+
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="!visible hidden" data-te-collapse-item aria-labelledby="headingTwo"
+                            data-te-parent="#accordionExample">
+                            <div class="py-4">
+                                <button class="border w-full text-start py-2 ps-2 text-gray-400 rounded text-sm">تعیین
+                                    محل</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+            <section class="border-t mt-6 pt-6 w-3/4">
+
+                <div id="accordionExample1">
+                    <div>
+                        <h2 class="mb-0" id="headingTwo">
+                            <button class="group relative flex  space-x-3 space-x-reverse" type="button"
+                                data-te-collapse-init data-te-collapse-collapsed data-te-target="#collapseTwo1"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                        <path strokeLinecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                <p>قیمت</p>
+
+                            </button>
+                        </h2>
+                        <div id="collapseTwo1" class="!visible hidden" data-te-collapse-item
+                            aria-labelledby="headingTwo" data-te-parent="#accordionExample1">
+                            <div class="py-4">
+                                <section class="flex items-center">
+                                    <div class="w-1/4 text-sm text-gray-500">
+                                        <p>حداقل</p>
+                                    </div>
+                                    <div class="w-3/4">
+                                        <select name="" id="" class="border w-full text-gray-400 rounded">
+                                            <option value="">مثلا ۷۰۰۰</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section class="rotate-90 w-4 text-gray-300">
+                                    ...
+                                </section>
+                                <section class="flex items-center">
+                                    <div class="w-1/4 text-sm text-gray-500">
+                                        <p>حداکثر</p>
+                                    </div>
+                                    <div class="w-3/4">
+                                        <select name="" id="" class="border w-full text-gray-400 rounded">
+                                            <option value="">مثلا ۷۰۰۰</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                            <option value="">1000</option>
+                                        </select>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+            <section class="border-t mt-6 pt-6 w-3/4">
+
+                <div id="accordionExample2">
+                    <div>
+                        <h2 class="mb-0" id="headingTwo">
+                            <button class="group relative flex  space-x-3 space-x-reverse" type="button"
+                                data-te-collapse-init data-te-collapse-collapsed data-te-target="#collapseTwo2"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <span
+                                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                        <path strokeLinecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </span>
+                                <p>وضعیت آگهی</p>
+
+                            </button>
+                        </h2>
+                        <div id="collapseTwo2" class="!visible hidden" data-te-collapse-item
+                            aria-labelledby="headingTwo" data-te-parent="#accordionExample2">
+                            <div class="py-4 space-y-4">
+                                <section class="flex items-center justify-between">
+                                    <div class=" text-sm text-gray-500">
+                                        <p>فقط عکس دار</p>
+                                    </div>
+                                    <div class="">
+                                        <input
+                                            class="flex flex-row-reverse mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
+                                            type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                    </div>
+                                </section>
+
+                                <section class="flex items-center justify-between">
+                                    <div class=" text-sm text-gray-500">
+                                        <p>فقط فوری ها</p>
+                                    </div>
+                                    <div class="">
+                                        <input
+                                            class="flex flex-row-reverse mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
+                                            type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+            <footer class="border-t w-3/4 mt-7 pt-5">
+
+                <section>
+                    <ul class="flex flex-wrap space-x-4 space-x-reverse  space-y-4 space-y-reverse">
+                        <li>
+                            <a href="" class="text-sm text-gray-500">درباره دیوار</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-sm text-gray-500">دریافت برنامه</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-sm text-gray-500">اتاق خبر</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-sm text-gray-500">کسب و کار ها</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-sm text-gray-500">پشتیبانی و قوانین</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="flex justify-center w-3/4 mt-5 space-x-7 space-x-reverse">
+                    <div>
+                        <i class="fa fa-twitter text-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-linkedin text-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-yc-square text-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-instagram text-lg"></i>
+                    </div>
+                </section>
+
+
+                <section class="flex justify-center items-center space-x-4 space-x-reverse mt-8">
+                    <div>
+                        <img src="images/1.png" alt="" class="w-24 h-20">
+                    </div>
+                    <div>
+                        <img src="images/2.png" alt="" class="w-24 h-20">
+                    </div>
+                    <div>
+                        <img src="images/3.jpeg" alt="" class="w-24 h-20">
+                    </div>
+                </section>
+
+            </footer>
+        </aside>
+
+        <main class="lg:w-4/5">
+            <section class="flex flex-wrap justify-center md:justify-start lg:hidden">
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-home text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">املاک</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-car text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">وسایل نقلیه</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-mobile text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">کالای دیجیتال</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-spoon text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">خانه و آشپزخانه</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-safari text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">خدمات</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-bluetooth text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">وسایل شخصی</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-xing text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">سرگرمی و فراغت</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-save text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">اجتماعی</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-random text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">تجهیزات صنعتی</h4>
+                </div>
+                <div class=" w-28 flex justify-center items-center flex-col mx-6 my-3">
+                    <div class=" bg-gray-100 w-full flex justify-center items-center p-1 rounded-lg">
+                        <i class="fa fa-ravelry text-red-700 text-3xl"></i>
+                    </div>
+                    <h4 class="mt-2">استخدام</h4>
+                </div>
+            </section>
+
+
+            <section class="mx-4">
+                <section class="my-5">
+                    <h6 class="text-gray-500 text-xs">دیوار تهران : انواع آگهی ها و خدمات در تهران</h6>
+                </section>
+
+                <section class="flex flex-wrap">
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+                    <article class="w-full md:w-1/2 xl:w-1/3">
+                        <div class="border flex justify-between p-3 rounded m-2">
+                            <section>
+                                <div class="mb-8">
+                                    <h6>پالتو مشکی</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>نو</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500">
+                                    <h6>۳۵۰,۰۰۰ تومان</h6>
+                                </div>
+                                <div class="mb-1 text-sm text-gray-500 flex space-x-1 space-x-reverse">
+                                    <h6 class="text-red-700">نردبان شده</h6>
+                                    <h6>لحظاتی پیش</h6>
+                                </div>
+                            </section>
+
+                            <section>
+                                <img src="images/12.png" alt="" class="w-32 h-32 rounded-md">
+                            </section>
+                        </div>
+                    </article>
+
+                </section>
+            </section>
+        </main>
+    </section>
+
+    <footer class="border-t border-t-gray-200 fixed bottom-0 right-0 left-0 py-2 lg:hidden bg-white">
+
+        <section class="flex items-center mx-5 sm:mx-7 md:mx-9 space-x-7 space-x-reverse">
+            <section class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse items-center justify-center grow">
+                <div>
+                    <i class="fa fa-calendar text-red-700 text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-red-700 text-xs md:text-sm">آگهی ها</p>
+                </div>
+            </section>
+            <section class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse items-center justify-center grow">
+                <div>
+                    <i class="fa fa-server text-gray-500 text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-xs md:text-sm">دسته ها</p>
+                </div>
+            </section>
+            <section class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse items-center justify-center grow">
+                <div>
+                    <i class="fa fa-plus-circle text-gray-500 text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-xs md:text-sm">افزودن</p>
+                </div>
+            </section>
+            <section class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse items-center justify-center grow">
+                <div>
+                    <i class="fa fa-comment text-gray-500 text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-xs md:text-sm">چت</p>
+                </div>
+            </section>
+            <section class="flex flex-col md:flex-row md:space-x-4 md:space-x-reverse items-center justify-center grow">
+                <div>
+                    <i class="fa fa-user text-gray-500 text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-xs md:text-sm">دیوار من</p>
+                </div>
+            </section>
+        </section>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+
+</body>
+
+</html>
