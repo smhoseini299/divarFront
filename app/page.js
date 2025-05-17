@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./components/ui/home/Sidebar";
+import Image from "next/image";
 
 export default function page() {
   return (
@@ -96,10 +97,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -123,10 +125,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -150,10 +153,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -177,10 +181,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -204,10 +209,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -231,10 +237,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -258,10 +265,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -285,10 +293,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -312,10 +321,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -339,10 +349,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -366,10 +377,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
@@ -393,10 +405,11 @@ export default function page() {
                 </section>
 
                 <section>
-                  <img
-                    src="images/12.png"
-                    alt=""
-                    className="w-32 h-32 rounded-md"
+                  <Image
+                    src={"/images/12.png"}
+                    className="rounded-md"
+                    width={130}
+                    height={130}
                   />
                 </section>
               </div>
